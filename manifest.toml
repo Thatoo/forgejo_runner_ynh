@@ -33,26 +33,37 @@ ram.build = "50M"
 ram.runtime = "50M"
 
 [install]
+    [install.local_forge]
+    ask.en = "Do you want to link it to the loca forgejo server?"
+    ask.fr = "Est-ce pour le lier au serveur forgejo local?"
+    yes = "true"
+    no = "false"
+    
     [install.forge_url]
     ask.en = "The URL to your Forgejo server"
     ask.fr = "L'adresse de votre serveur Forgejo"
     type = "string"
     example = "https://code.forgejo.org"
+    visible = "!enable_registration"
 
     [install.registration_token]
     ask.en = "The registration token provided by your Forgejo server"
     ask.fr = "Le jeton d'inscription fourni par votre serveur Forgejo"
     type = "string"
+    visible = "!enable_registration"
 
     [install.runner_name]
     ask.en = "The runner's name visible on the forge"
     ask.fr = "Le nom de l'exécuteur visible sur la forge"
     type = "string"
+    visible = "!enable_registration"
 
     [install.runner_labels]
     ask.en = "The runner's labels (comma-separated list)"
     ask.fr = "Les labels de l'exécuteur (liste séparée par des virgules)"
     type = "string"
+    help.en = "They should be written as follows, change <label-name> : <label-name1>:host,<label-name2>:host"
+    help.fr = "Ils doivent s'écrire sous la forme suivante en changeant <label-name> : <label-name1>:host,<label-name2>:host"
 
 [resources]
 
