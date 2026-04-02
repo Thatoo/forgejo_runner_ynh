@@ -36,6 +36,7 @@ ram.runtime = "50M"
     [install.local_forge]
     ask.en = "Do you want to link it to a local forgejo server?"
     ask.fr = "Est-ce pour le lier à un serveur forgejo local?"
+    type = "boolean"
     yes = "true"
     no = "false"
 
