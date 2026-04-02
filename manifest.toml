@@ -34,10 +34,17 @@ ram.runtime = "50M"
 
 [install]
     [install.local_forge]
-    ask.en = "Do you want to link it to the loca forgejo server?"
-    ask.fr = "Est-ce pour le lier au serveur forgejo local?"
+    ask.en = "Do you want to link it to a local forgejo server?"
+    ask.fr = "Est-ce pour le lier à un serveur forgejo local?"
     yes = "true"
     no = "false"
+
+    [install.forgejo_app]
+    ask.en = "Name of the local forgejo instance you want to link to"
+    ask.fr = "Nom de l'instance locale de forgejo que vous voulez lier"
+    type = "string"
+    default = "forgejo"
+    visible = "enable_registration"
     
     [install.forge_url]
     ask.en = "The URL to your Forgejo server"
