@@ -39,32 +39,33 @@ ram.runtime = "50M"
     type = "boolean"
     yes = "true"
     no = "false"
+    default = "true"
 
     [install.forgejo_app]
     ask.en = "Name of the local forgejo instance you want to link to"
     ask.fr = "Nom de l'instance locale de forgejo que vous voulez lier"
     type = "string"
     default = "forgejo"
-    visible = "enable_registration"
+    visible = "local_forge"
     
     [install.forge_url]
     ask.en = "The URL to your Forgejo server"
     ask.fr = "L'adresse de votre serveur Forgejo"
     type = "string"
     example = "https://code.forgejo.org"
-    visible = "!enable_registration"
+    visible = '! local_forge'
 
     [install.registration_token]
     ask.en = "The registration token provided by your Forgejo server"
     ask.fr = "Le jeton d'inscription fourni par votre serveur Forgejo"
     type = "string"
-    visible = "!enable_registration"
+    visible = "! local_forge"
 
     [install.runner_name]
     ask.en = "The runner's name visible on the forge"
     ask.fr = "Le nom de l'exécuteur visible sur la forge"
     type = "string"
-    visible = "!enable_registration"
+    visible = "! local_forge"
 
     [install.runner_labels]
     ask.en = "The runner's labels (comma-separated list)"
