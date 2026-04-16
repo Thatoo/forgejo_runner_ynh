@@ -74,3 +74,6 @@ ram.runtime = "50M"
     [resources.install_dir]
 
     [resources.ports]
+
+    [resources.nodejs]
+    version = "22"
